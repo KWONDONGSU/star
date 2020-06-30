@@ -28,6 +28,10 @@ h3 {
   top: 300px;
   z-index: 99999;
 }
+.body {
+  width: 100%;
+  overflow-x: hidden;
+}
 /*********************button****************************/
 .btn {
   float: right;
