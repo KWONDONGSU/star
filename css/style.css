@@ -9,11 +9,20 @@ h2 {
 h3 {
   font-size: 1rem;
 }
+.popup {
+  width: 100%;
+  min-width: 1024px;
+  overflow: hidden;
+}
+.popup img {
+  position: relative;
+  left: calc(50% - 960px); /* 중요 */
+}
 /* 퀵메뉴 */
 #quick {
   position: absolute;
   right: 0;
-  top: 100px;
+  bottom: 0px;
   width: 280px;
   height: 350px;
   background: #cfa;
@@ -25,13 +34,10 @@ h3 {
   background-color: yellow;
   position: fixed;
   right: 0;
-  top: 300px;
+  bottom: 100px;
   z-index: 99999;
 }
-.body {
-  width: 100%;
-  overflow-x: hidden;
-}
+
 /*********************button****************************/
 .btn {
   float: right;
@@ -39,17 +45,22 @@ h3 {
   height: 30px;
 }
 /*********************header****************************/
-#section1 {
-  float: left;
-}
-.sec2_tit {
-  padding-top: 680px;
-}
+
 .gv_mn {
   float: left;
   color: #000;
 }
 .hv_mn {
+  float: left;
+  margin-left: 10px;
+  padding-top: 15px;
+  color: #666;
+}
+.gery {
+  float: left;
+  color: #000;
+}
+.hgt {
   float: left;
   margin-left: 10px;
   padding-top: 15px;
@@ -102,7 +113,7 @@ h3 {
   border: 1px solid black;
   border-radius: 5px;
   color: #ffffff;
-  z-index: -99999;
+  z-index: 99999;
   display: none;
 }
 .sub :hover {
@@ -150,9 +161,13 @@ h3 {
 #header #nav .depth1 ul li:last-child {
   background: none;
 }
+
+#section1 .slide_img {
+  width: 100%;
+  min-width: 1024px;
+}
 #section2 .yu_mn {
   width: 100%;
-  height: 350px;
 }
 .con_mn {
   width: 100%;
@@ -165,15 +180,19 @@ h3 {
   display: block;
   clear: both;
 }
-#section2 .inner div {
+#section2 .inner .clinic div {
   position: relative;
   float: left;
   width: 33.333%;
 }
-#section2 .inner div a {
+#section2 .inner .clinic div img {
+  width: 100%;
+}
+#section2 .inner .clinic div a {
   display: block;
-  border: 1px solid #ccc;
-  height: 320px;
+  border: 3px solid #ccc;
+  width: 100%;
+  height: 100%;
   box-sizing: border-box;
   background-color: #36cfbf;
 }
@@ -181,17 +200,21 @@ h3 {
   display: none; /*transition:0.5s; opacity:0*/
   font-size: 80px;
   text-align: center;
-  padding-top: 80px;
-  color: aqua;
+  color: #fff;
 }
-#section2 div a:hover .text_on {
+#section2 .clinic div a:hover .text_on {
   display: block; /*opacity:1*/
+  height: calc(100% - 80px);
+  padding-top: 80px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
 }
-#section2 div a:hover .img_off {
-  display: none;
-}
+
 /* 박스테두리 에니메이션 */
-#section2 .inner div a:before {
+#section2 .inner .clinic div a:before {
   content: "";
   position: absolute;
   left: 0px;
@@ -201,17 +224,18 @@ h3 {
   border-top: 4px solid transparent;
   border-right: 4px solid transparent;
   box-sizing: border-box;
+  z-index: 1;
   /* border-top: 4px solid transparent; */
   /* border-right: 4px solid transparent; */
 }
-#section2 .inner div a:hover:before,
-#section2 .inner div a:focus:before {
+#section2 .inner .clinic div a:hover:before,
+#section2 .inner .clinic div a:focus:before {
   border-color: aqua;
   width: 100%;
   height: 100%;
   transition: width 0.4s, height 0.4s 0.4s;
 }
-#section2 .inner div a::after {
+#section2 .inner .clinic div a::after {
   content: "";
   position: absolute;
   right: 0px;
@@ -224,8 +248,8 @@ h3 {
   /* border-top: 4px solid transparent; */
   /* border-right: 4px solid transparent; */
 }
-#section2 .inner div a:hover:after,
-#section2 .inner div a:focus::after {
+#section2 .inner .clinic div a:hover:after,
+#section2 .inner .clinic div a:focus::after {
   border-color: aqua;
   width: 100%;
   height: 100%;
@@ -244,7 +268,6 @@ h3 {
 }
 #section5 {
   width: 100%;
-  height: 500px;
   margin-top: 150px;
   margin-bottom: 150px;
 }
@@ -268,33 +291,56 @@ h3 {
   padding-top: 10px;
   margin-left: 10px;
 }
-.section6 .inner div {
+/* 섹션6 */
+#section6 .yty {
+  width: 100%;
+}
+.uyt {
+  width: 100%;
+  height: 45px;
+  margin-top: 110px;
+  margin-bottom: 70px;
+}
+#section6::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+#section6 .inner .iuy div {
   position: relative;
   float: left;
   width: 33.333%;
-  background-color: aquamarine;
 }
-.section6 .inner div a {
+#section6 .inner .iuy div img {
+  width: 100%;
+}
+#section6 .inner .iuy div a {
   display: block;
   border: 1px solid #ccc;
-  height: 320px;
+  width: 100%;
+  height: 100%;
   box-sizing: border-box;
+  background-color: #36cfbf;
 }
-.section6 a .text_on {
+#section6 a .texton {
   display: none; /*transition:0.5s; opacity:0*/
   font-size: 17px;
   text-align: center;
-  padding-top: 120px;
-  color: blue;
+  color: #000000;
 }
-.section6 div a:hover .text_on {
+#section6 .iuy div a:hover .texton {
   display: block; /*opacity:1*/
+  height: calc(100% - 80px);
+  padding-top: 80px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(229, 252, 255, 0.7);
 }
-.section6 div a:hover .img_off {
-  display: none;
-}
+
 /* 박스테두리 에니메이션 */
-.section6 .inner div a:before {
+#section6 .inner .iuy div a:before {
   content: "";
   position: absolute;
   left: 0px;
@@ -304,17 +350,18 @@ h3 {
   border-top: 4px solid transparent;
   border-right: 4px solid transparent;
   box-sizing: border-box;
+  z-index: 1;
   /* border-top: 4px solid transparent; */
   /* border-right: 4px solid transparent; */
 }
-.section6 .inner div a:hover:before,
-.section6 .inner div a:focus:before {
-  border-color: cornflowerblue;
+#section6 .inner .iuy div a:hover:before,
+#section6 .inner .iuy div a:focus:before {
+  border-color: aqua;
   width: 100%;
   height: 100%;
   transition: width 0.4s, height 0.4s 0.4s;
 }
-.section6 .inner div a::after {
+#section6 .inner .iuy div a::after {
   content: "";
   position: absolute;
   right: 0px;
@@ -327,9 +374,9 @@ h3 {
   /* border-top: 4px solid transparent; */
   /* border-right: 4px solid transparent; */
 }
-.section6 .inner div a:hover:after,
-.section6 .inner div a:focus::after {
-  border-color: cornflowerblue;
+#section6 .inner .iuy div a:hover:after,
+#section6 .inner .iuy div a:focus::after {
+  border-color: aqua;
   width: 100%;
   height: 100%;
   transition: width 0.4s, height 0.4s 0.4s;
@@ -340,7 +387,7 @@ h3 {
   height: 200px;
   float: left;
   margin-top: 130px;
-  background-color: aquamarine;
+  background-color: #39c6c4;
 }
 .footer_mn {
   width: 100%;
@@ -360,7 +407,7 @@ h3 {
   margin-top: 10px;
   margin-left: 10px;
   font-size: 20px;
-  color: #000;
+  color: #fff;
 }
 .ft_text2 {
   float: left;
@@ -369,7 +416,7 @@ h3 {
   margin-top: 10px;
   margin-left: 10px;
   font-size: 20px;
-  color: #000;
+  color: #fff;
 }
 .ft_text3 {
   float: left;
@@ -378,7 +425,7 @@ h3 {
   margin-top: 10px;
   margin-left: 10px;
   font-size: 20px;
-  color: #000;
+  color: #fff;
 }
 .ft_text5 {
   float: left;
@@ -387,7 +434,7 @@ h3 {
   margin-top: 10px;
   margin-left: 10px;
   font-size: 20px;
-  color: #000;
+  color: #fff;
 }
 .ft_text6 {
   float: left;
@@ -396,7 +443,7 @@ h3 {
   margin-top: 10px;
   margin-left: 10px;
   font-size: 20px;
-  color: #000;
+  color: #fff;
 }
 .ft_textbox2 {
   float: left;
@@ -412,7 +459,7 @@ h3 {
 }
 /***********************************************************************/
 .tv_mn {
-  margin-top: 50px;
+  margin-top: 110px;
   margin-bottom: 10px;
   font-size: 40px;
   color: #000;
@@ -446,12 +493,7 @@ h3 {
 .slick-current {
   opacity: 1;
 }
-#wrapper {
-  width: calc(100% - 100px);
-  margin: 0 auto;
-  margin-left: 320px;
-  position: relative;
-}
+
 .bx-wrapper {
   position: relative;
   margin-bottom: 60px;
@@ -459,6 +501,7 @@ h3 {
   *zoom: 1;
   -ms-touch-action: pan-y;
   touch-action: pan-y;
+  margin: 0 auto;
 }
 .bx-wrapper img {
   max-width: 100%;
@@ -477,13 +520,6 @@ ul.bxslider {
 }
 /** THEME
 ===================================*/
-.bx-wrapper {
-  -moz-box-shadow: 0 0 5px #ccc;
-  -webkit-box-shadow: 0 0 5px #ccc;
-  box-shadow: 0 0 5px #ccc;
-  border: 5px solid #fff;
-  background: #fff;
-}
 .bx-wrapper .bx-pager,
 .bx-wrapper .bx-controls-auto {
   position: absolute;

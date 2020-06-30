@@ -7,9 +7,9 @@ $(function () {
   });
   $(".bxslider").bxSlider({
     captions: true,
-    slideWidth: 600,
+    slideWidth: 800,
     auto: true,
-    autoControls: true,
+    autoControls: false,
     stopAutoOnclick: true,
   });
   $(".pop_close").click(function () {
@@ -19,6 +19,10 @@ $(function () {
   $(".lanuage").click(function () {
     $(".sub").slideToggle("fast");
   });
+
+
+
+  //따라다니는 팝업
   var UI = {
     init: function () {
       this.quickMenuFn();
@@ -88,7 +92,6 @@ $(function () {
     },
   };
 
-  $(function () {
-    UI.initialize();
-  });
+    UI.initialize();   //따라다니는 팝업끝
+
 });
