@@ -2,9 +2,14 @@ $(function () {
   $(".regular").slick({
     dots: true,
     infinite: true,
-    slidesToShow: 1,
+    slidesToShow: 2,
     slidesToScroll: 1,
   });
+  $(".lazy").slick({
+    lazyLoad: "ondemand", // ondemand progressive anticipated
+    infinite: true,
+  });
+
   $(".bxslider").bxSlider({
     captions: true,
     slideWidth: 800,
@@ -12,15 +17,14 @@ $(function () {
     autoControls: false,
     stopAutoOnclick: true,
   });
+
   $(".pop_close").click(function () {
     $(".popup").fadeOut(300);
   });
-  $(".lan").hide();
+  $(".lan").fadeIn(300);
   $(".lanuage").click(function () {
     $(".sub").slideToggle("fast");
   });
-
-
 
   //따라다니는 팝업
   var UI = {
@@ -92,6 +96,5 @@ $(function () {
     },
   };
 
-    UI.initialize();   //따라다니는 팝업끝
-
+  UI.initialize(); //따라다니는 팝업끝
 });

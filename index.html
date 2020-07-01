@@ -34,7 +34,7 @@
       <a href="#">
         <img src="images/pop.jpg" alt="">
       </a>
-      <button class="pop_close">닫기</button>
+      <button class="pop_close">X</button>
     </div>
       <header id="header">
         <div class="inner">
@@ -45,8 +45,11 @@
           </h1>
           <div class="header_top">
             <div class="lanuage">
-            <button>한국어</button>
+            <button><img src="images/open-menu.png" alt=""></button>
             <ul class="sub">
+              <li>
+                <a href="#">한국어</a>
+              </li>
               <li>
                 <a href="#">日本語</a>
               </li>
@@ -57,11 +60,6 @@
                 <a href="#">中國語</a>
               </li>
             </ul>
-            </div>
-            <div class="btn">
-              <a href="#">
-              <img src="images/open-menu.png" alt="">
-            </a>
             </div>
           </div>
           <nav id="nav">
@@ -176,16 +174,18 @@
         </div>
       </header>
       <div id="wrap">
-        <section id="section1">
-            <a href="#">
-              <img src="images/main.jpg" alt="" class="slide_img">
-            </a>
-            <div class="info"></div>
-            <div class="search"></div>
-        </section>
-
-
-            
+        <section class="lazy slider" data-sizes="50vw" id="section1">
+          <div>
+            <img src="images/main.jpg" alt="">
+          </div>
+          <div>
+            <img src="images/main.jpg" alt="">
+          </div>
+          <div>
+            <img src="images/main.jpg" alt="">
+          </div>
+          <div>
+          </section>
               <section id="section2">
                 <div class="inner">
                   <div class="yu_mn">
@@ -226,7 +226,6 @@
 
       </section>
         <div class="sec3">
-          <div class="inner">
             <a href="#">
               <h2 class="tv_mn">스타 피부과 시술소개</h2>
             </a>
@@ -246,7 +245,6 @@
               <div>
                 <img src="images/slider4.jpg" title="">
               </div>      
-            </div>
     </div>
         </section>
         <section id="section4">
@@ -269,13 +267,7 @@
         </section>
         <section id="section5">
           <div class="veo">
-          <div class="inner">
-          <iframe width="1000" height="500"
-          src="https://www.youtube.com/embed/Q36L41odi_c"
-          frameborder="0" allow="accelerometer;
-          autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-        </iframe>
-      </div>
+          <div><img src="images/vd.jpg" alt=""></div>
     </div>
         </section>
         <section id="section6">
@@ -307,8 +299,8 @@
               <img src="images/foot2.png" alt="">
             </p>
             <p class="texton">여드름 원인 제거와 치료를 한번에!<br>
-              많은 관심과 성원에 힘입어<br>
-              여드름 4주완성 프로그램 이벤트를 연장하게 되었습니다.</p>
+              많은 관심덕분에 여드름 4주완성 프로그램<br>
+               이벤트를 연장하게 되었습니다.</p>
           </a>
         </div>
           <div><a href="#">
@@ -325,7 +317,7 @@
 </section>
   
   </body>
-  <div class="last">
+  <footer class="last">
     <div class="inner">
         <div class="footer_mn">
           <div class="ft_textbox">
@@ -340,6 +332,6 @@
             <div class="ft_text6">COPYRIGHT STARSKIN CO. LTD. ALL RIGHTS RESERVED</div>
           </div>
         </div>
-    </div>
+     </footer>
   </div>
 </html>
