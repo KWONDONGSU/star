@@ -283,9 +283,10 @@ h3 {
 }
 #section3 {
   width: 100%;
-  height: 500px;
   margin-top: 50px;
 }
+#section3 .bx-wrapper{width:800px;margin:0 auto}
+
 #section5 {
   width: 100%;
   margin-top: 150px;
@@ -293,6 +294,10 @@ h3 {
 }
 .veo {
   text-align: center;
+}
+.veo img{
+  width:100%;
+  min-width:1024px
 }
 /*고쳐야대는부분*/
 .star {
@@ -605,7 +610,8 @@ ul.bxslider {
 /* DIRECTION CONTROLS (NEXT / PREV) */
 .bx-wrapper .bx-prev {
   left: 10px;
-  background: url("images/controls.png") no-repeat 0 -32px;
+  background: url("../images/back.png") no-repeat 0 0;
+  background-size:100%
 }
 .bx-wrapper .bx-prev:hover,
 .bx-wrapper .bx-prev:focus {
@@ -613,18 +619,19 @@ ul.bxslider {
 }
 .bx-wrapper .bx-next {
   right: 10px;
-  background: url("images/controls.png") no-repeat -43px -32px;
+  background: url("../images/next.png") no-repeat 0 0;
+  background-size:100%
 }
 .bx-wrapper .bx-next:hover,
 .bx-wrapper .bx-next:focus {
-  background-position: -43px 0;
+  background-position: 0 0;
 }
 .bx-wrapper .bx-controls-direction a {
   position: absolute;
   top: 30%;
   outline: 0;
   width: 32px;
-  height: 32px;
+  height: 50px;
   text-indent: -9999px;
   z-index: 9999;
 }

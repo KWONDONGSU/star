@@ -5,14 +5,15 @@ $(function () {
     slidesToShow: 2,
     slidesToScroll: 1,
   });
-  $(".lazy").slick({
+  /*$(".lazy").slick({
     lazyLoad: "ondemand", // ondemand progressive anticipated
     infinite: true,
-  });
+    autoplay : true,
+    autoplaySpeed : 2000,
+  });*/
 
   $(".bxslider").bxSlider({
     captions: true,
-    slideWidth: 800,
     auto: true,
     autoControls: false,
     stopAutoOnclick: true,
